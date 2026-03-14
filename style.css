@@ -1,0 +1,48 @@
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Glassmorphism Header on Scroll */
+.nav-scrolled {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    height: 70px !important;
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect for pricing cards */
+.pricing-card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+/* Custom Cursor or Button Glow */
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+}
+
+/* Animated Gradient Background for Hero */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-bg {
+    background: linear-gradient(-45deg, #f8fafc, #eef2ff, #faf5ff, #f8fafc);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
